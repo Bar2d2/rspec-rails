@@ -21,7 +21,7 @@ RSpec.describe Rspec::Generators::ScaffoldGenerator, type: :generator do
       it { is_expected.to contain('redirect_to(post_url(Post.last))') }
       it { is_expected.to contain(/"redirects to the \w+ list"/) }
 
-      if ::Rails::VERSION::STRING >= '7.0.0'
+      if ::Rails::VERSION::STRING >= '7.0.4'
         it { is_expected.to contain(/renders a response with 422 status \(i.e. to display the 'new' template\)/) }
         it { is_expected.to contain(/renders a response with 422 status \(i.e. to display the 'edit' template\)/) }
       else
@@ -70,7 +70,7 @@ RSpec.describe Rspec::Generators::ScaffoldGenerator, type: :generator do
       it { is_expected.to contain(/^RSpec.describe PostsController, #{type_metatag(:controller)}/) }
       it { is_expected.to contain(/GET #new/) }
       it { is_expected.to contain(/"redirects to the created \w+"/) }
-      if ::Rails::VERSION::STRING >= '7.0.0'
+      if ::Rails::VERSION::STRING >= '7.0.4'
         it { is_expected.to contain(/renders a response with 422 status \(i.e. to display the 'new' template\)/) }
       else
         it { is_expected.to contain(/returns a success response \(i.e. to display the 'new' template\)/) }
@@ -80,7 +80,7 @@ RSpec.describe Rspec::Generators::ScaffoldGenerator, type: :generator do
 
       it { is_expected.to contain(/GET #edit/) }
       it { is_expected.to contain(/"redirects to the \w+"/) }
-      if ::Rails::VERSION::STRING >= '7.0.0'
+      if ::Rails::VERSION::STRING >= '7.0.4'
         it { is_expected.to contain(/renders a response with 422 status \(i.e. to display the 'edit' template\)/) }
       else
         it { is_expected.to contain(/returns a success response \(i.e. to display the 'edit' template\)/) }

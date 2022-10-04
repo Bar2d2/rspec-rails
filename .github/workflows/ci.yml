@@ -46,13 +46,13 @@ jobs:
          # Rails 7.0 builds >= 2.7
          - ruby: 3.1
            env:
-             RAILS_VERSION: '~> 7.0.0'
+             RAILS_VERSION: '~> 7.0.4'
          - ruby: '3.0'
            env:
-             RAILS_VERSION: '~> 7.0.0'
+             RAILS_VERSION: '~> 7.0.4'
          - ruby: 2.7
            env:
-             RAILS_VERSION: '~> 7.0.0'
+             RAILS_VERSION: '~> 7.0.4'
 
          # Rails 6.1 builds >= 2.5
          - ruby: 3.1
